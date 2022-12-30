@@ -49,7 +49,7 @@ function Introduction()
         </div>
 
         <div class="avatar">
-            <img src="../../../img/lorran.png" ></img>
+            <img src="../../../img/lorran.png" alt='null'></img>
         </div>
 
     
