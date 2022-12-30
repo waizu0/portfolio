@@ -1,5 +1,4 @@
 import {useRef} from "react";
-import {FaBars, FaTimes} from "react-icons/fa";
 
 function NavBar()
 {
@@ -11,11 +10,6 @@ function NavBar()
         skillsSection.scrollIntoView({ behavior: "smooth" });
     }
     
-
-    const showNavbar = () =>
-    {
-        navRef.current.classList.toggle("responsive_nav");
-    }
 
     return(
         <header>
