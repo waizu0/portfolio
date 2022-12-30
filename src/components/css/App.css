@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+:root{
+  --mainColorLight: #515d8b;
+  --secondaryColor: #ffffff;
+  --downloadCVBackground: #4b154b;
+  --textColor: #c4c4c4;
+  --backgroundColor: #140411;
+  --logoColor: #fff;
+  --backgroundBoxColor: rgb(32, 32, 32);
+}
+
+header {
+  
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  height: 80px;
+  width: 100%;
+  padding: 0 2rem;
+  color: var(--textColor);
+}
+
+nav button{
+  background-color: transparent;
+  margin: 0 1.5rem;
+  color: var(--textColor);
+  text-decoration: none;
+  font-size: 1.23em;
+}
+
+
+
+nav button:hover{
+  color: var(--secondaryColor);
+}
+
+header .nav-btn{
+  padding: 5px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: var(--textColor);
+  visibility: hidden;
+  opacity: 0;
+}
+
+.logo{
+  font-size: 2.22em;
+  font-weight: bold;
+  color: var(--logoColor);
+}
+
+body{
+  background-image: url('../../../public/img/background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+.contact-btn{
+  border: solid white 1.3px;
+  padding: 15px 30px;
+}
+
+.intro{
+  height: 550px;
+  border: 10px solid var(--backgroundBoxColor);
+  background-color: var(--backgroundBoxColor);
+  color: var(--secondaryColor);
+  border-radius: 25px;
+  width: 70%;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px,
+   rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px,
+     rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 20px;
+  overflow: auto;
+  padding-left: 50px;
+}
+
+.type{
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-top: 80px;
+}
+
+.description{
+  color: var(--textColor);
+  font-size: 2em;
+  width: 50%;
+  float: left;
+}
+
+.avatar img{
+  width: 26%;
+  height: 26%;
+  float: right;
+  margin-top: -65px;
+  margin-right: 80px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px,
+  rgba(0, 0, 0, 0.12) 0px 4px 6px,
+   rgba(0, 0, 0, 0.17) 0px 12px 13px,
+    rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border-radius: 100%;
+    height: auto;
+
+}
+
+.curriculum{
+  font-size: 0.8em;
+  text-decoration: none;
+  color: black;
+  transition: .2s;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: solid white 1.3px;
+  margin-top: 20px;
+  max-width: 47%;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+
+.curriculum:hover{
+  background-color: var(--downloadCVBackground);
+  color: var(--secondaryColor);
+}
+
+
+
+.github, .linkedin{
+  position: absolute;
+  top: -5px;
+  right: 10px;
+  background-color: transparent;
+  font-size: 0.8em;
+  text-decoration: none;
+  color: var(--textColor);
+  transition: .2s;
+  font-weight: bold;
+  padding: 10px 20px;
+  margin-top: 20px;
+  max-width: 47%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin-right: 10px; /* add this */
+  position: absolute;
+  font-size: 1.1em;
+  border: none; /* remove the border here */
+  cursor: pointer;
+}
+
+.github:hover, .linkedin:hover
+{
+  color: var(--logoColor);
+}
+  
+
+
+
+
+.github {
+  margin-right: 80px;
+}
+
+
+@media (max-width: 768px) {
+  .intro {
+    height: auto;
+  }
+
+  .description {
+    width: 100%;
+    float: none;
+  }
+
+  .avatar img {
+    width: 40%;
+    height: 40%;
+    float: none;
+    margin-top: 20px;
+    margin-right: 0;
+  }
+}
+
+.services{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 50px;
+}
+
+.service{
+  width: 30%;
+  border: 10px solid var(--backgroundBoxColor);
+  background-color: var(--backgroundBoxColor);
+  color: var(--secondaryColor);
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px,
+  rgba(0, 0, 0, 0.12) 0px 4px 6px,
+   rgba(0, 0, 0, 0.17) 0px 12px 13px,
+    rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  margin-bottom: 50px;
+  text-align: center;
+  padding: 20px;
+}
+
+.service h3{
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.service p{
+  font-size: 0.8em;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .service {
+    width: 45%;
+  }
+}
+
+@media (max-width: 576px) {
+  .service {
+    width: 90%;
+  }
+}
+
+.portfolio{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 50px;
+}
+
+.project{
+  width: 30%;
+  border: 10px solid var(--backgroundBoxColor);
+  background-color: var(--backgroundBoxColor);
+  color: var(--secondaryColor);
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px,
+  rgba(0, 0, 0, 0.12) 0px 4px 6px,
+   rgba(0, 0, 0, 0.17) 0px 12px 13px,
+    rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  margin-bottom: 50px;
+  text-align: center;
+  padding: 20px;
+}
+
+.project h3{
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.project p{
+  font-size: 0.8em;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .project {
+    width: 45%;
+  }
+}
+
+@media (max-width: 576px) {
+  .project {
+    width: 90%;
+  }
+}
+
+.footer{
+  height: 80px;
+  background-color: var(--backgroundBoxColor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--secondaryColor);
+  font-size: 0.8em;
+}
+
+.download-icon
+{
+  vertical-align: bottom;
+}
+
