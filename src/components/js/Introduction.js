@@ -6,13 +6,17 @@ import { AiFillLinkedin } from 'react-icons/ai';
 
 
 
+
 function Introduction()
 {
+    
+
 
     function clickHandler()
     {
         window.location.href = '../../../docs/Resume.pdf'
     }
+
     
     return(
         <div class="intro">
@@ -37,7 +41,7 @@ function Introduction()
         <div class="description">
             <p>Hello, i'm <strong>Lorran de Barros</strong>! I am a <strong>Unity Engine</strong> and <strong>JavaScript</strong> developer who loves learning new technologies. I have experience working on various projects and am always looking to improve my skills.</p>
 
-
+        
 
             <button class="curriculum" onClick={clickHandler}><AiOutlineDownload class="download-icon" span style={{play:'inline-flex', alignItems: 'center'}}/>Download CV.pdf</button>
             <div class="container">
@@ -48,7 +52,7 @@ function Introduction()
 
         </div>
 
-        <div class="avatar">
+        <div id="avatar">
             <img src="../../../img/lorran.png" alt='null'></img>
         </div>
 

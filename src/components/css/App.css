@@ -5,16 +5,18 @@
   margin: 0;
   box-sizing: border-box;
   font-family: 'Titillium Web', sans-serif;
+  
 }
 
 :root{
   --mainColorLight: #515d8b;
   --secondaryColor: #ffffff;
-  --downloadCVBackground: #4b154b;
+  --downloadCVBackground: #6B2286;
   --textColor: #c4c4c4;
   --backgroundColor: #140411;
   --logoColor: #fff;
-  --backgroundBoxColor: rgb(32, 32, 32);
+  --backgroundBoxColor: rgb(24, 21, 39);
+  --progress: 0%;
 }
 
 header {
@@ -57,6 +59,8 @@ header .nav-btn{
   font-size: 2.22em;
   font-weight: bold;
   color: var(--logoColor);
+  cursor: pointer;
+  user-select: none;
 }
 
 body{
@@ -77,6 +81,7 @@ body{
 }
 
 .intro{
+  overflow: hidden; /* Hide scrollbars */
   height: 550px;
   border: 10px solid var(--backgroundBoxColor);
   background-color: var(--backgroundBoxColor);
@@ -92,7 +97,6 @@ body{
   align-items: center;
   margin: auto;
   margin-top: 20px;
-  overflow: auto;
   padding-left: 50px;
 }
 
@@ -109,9 +113,12 @@ body{
   float: left;
 }
 
-.avatar img{
-  width: 26%;
-  height: 26%;
+#avatar img{
+
+  
+  pointer-events: none;
+  width: 28%;
+  height: 28%;
   float: right;
   margin-top: -65px;
   margin-right: 80px;
@@ -123,6 +130,7 @@ body{
     height: auto;
 
 }
+
 
 .curriculum{
   font-size: 0.8em;
@@ -136,7 +144,8 @@ body{
   max-width: 47%;
   text-align: center;
   border: 1px solid black;
-  border-radius: 10px;
+  border-radius: 7px;
+  cursor: pointer;
 }
 
 
@@ -307,4 +316,113 @@ body{
 {
   vertical-align: bottom;
 }
+
+
+.skills-container
+{
+  height: 23px;
+  width: 450px;
+  background-color: white;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: rgba(175, 92, 15, 0) 54px 55px, rgba(170, 16, 231, 0.12) 0px -12px 30px,
+  rgba(141, 14, 114, 0.12) 0px 4px 6px,
+   rgba(184, 5, 169, 0.17) 0px 12px 13px,
+    rgba(155, 16, 155, 0.09) 0px -3px 5px;
+  
+  }
+
+.skills-container .skill-25
+{
+  position: absolute;
+  height: 100%;
+  background-color: var(--downloadCVBackground);
+  animation: progress-animation 1s;
+  animation-fill-mode: forwards;
+  border-radius: 10px;
+  --progress: 20%;
+  
+}
+
+.skills-container .skill-88
+{
+  position: absolute;
+  height: 100%;
+  background-color: var(--downloadCVBackground);
+  animation: progress-animation 1s;
+  animation-fill-mode: forwards;
+  border-radius: 10px;
+  --progress: 88%;
+  
+}
+
+.skills-container .skill-50
+{
+  position: absolute;
+  height: 100%;
+  background-color: var(--downloadCVBackground);
+  animation: progress-animation 1s;
+  animation-fill-mode: forwards;
+  border-radius: 10px;
+  --progress: 50%;
+  
+}
+
+.skills-container .skill-75
+{
+  position: absolute;
+  height: 100%;
+  background-color: var(--downloadCVBackground);
+  animation: progress-animation 1s;
+  animation-fill-mode: forwards;
+  border-radius: 10px;
+  --progress: 75%;
+  
+}
+
+.skills-container .skill-100
+{
+  position: absolute;
+  height: 100%;
+  background-color: var(--downloadCVBackground);
+  animation: progress-animation 1s;
+  animation-fill-mode: forwards;
+  border-radius: 10px;
+  --progress: 100%;
+  
+}
+
+@keyframes progress-animation {
+  0%
+  {
+  width: 0;
+  }
+  100%
+  {
+  width: var(--progress);
+  }
+}
+
+.gamedev-skills{
+ float: left;
+ padding: 15px;
+ width: 50%;
+ height: 500px;
+}
+
+.javascript-skills{
+  float: right;
+  height: 500px;
+  padding: 15px;
+  }
+
+.skill-header{
+  padding: 5px;
+}
+
+.javascript-skills h1
+{
+  text-align: right;
+}
+
 

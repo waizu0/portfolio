@@ -16,7 +16,7 @@ function NavBar()
             <h1 class="logo">waizudev</h1>
             <nav ref={navRef}>
                 <button onClick={() => scrollHandler('skills')}>Skills</button>
-                <button onClick={() => scrollHandler('projects')}>Projects</button>
+                <button onClick={() => scrollHandler('my-work')}>My Work</button>
                 <button onClick={() => scrollHandler('contact-me')}>Contact Me!</button>
 
 
