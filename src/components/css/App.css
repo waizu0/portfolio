@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap');
-
 *{
   padding: 0;
   margin: 0;
@@ -113,22 +112,26 @@ body{
   float: left;
 }
 
-#avatar img{
-
-  
+#avatar img {
   pointer-events: none;
-  width: 28%;
-  height: 28%;
+  width: 18vw; /* changed from fixed width in pixels to responsive width in vw */
+  height: 18vw; /* changed from fixed height in pixels to responsive height in vw */
   float: right;
   margin-top: -65px;
   margin-right: 80px;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px,
-  rgba(0, 0, 0, 0.12) 0px 4px 6px,
-   rgba(0, 0, 0, 0.17) 0px 12px 13px,
+    rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px,
     rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    border-radius: 100%;
-    height: auto;
+  border-radius: 100%;
+  height: auto;
+}
 
+
+@media (max-width: 480px) {
+  #avatar img {
+    width: 0%;
+    height: 0%;
+  }
 }
 
 
@@ -195,24 +198,7 @@ body{
 }
 
 
-@media (max-width: 768px) {
-  .intro {
-    height: auto;
-  }
 
-  .description {
-    width: 100%;
-    float: none;
-  }
-
-  .avatar img {
-    width: 40%;
-    height: 40%;
-    float: none;
-    margin-top: 20px;
-    margin-right: 0;
-  }
-}
 
 .services{
   display: flex;
@@ -424,5 +410,3 @@ body{
 {
   text-align: right;
 }
-
-
