@@ -14,7 +14,7 @@ function Introduction()
 
     function clickHandler()
     {
-        window.location.href = '../../../docs/Resume.pdf'
+        window.location.href = './docs/Resume.pdf'
     }
 
     
@@ -53,7 +53,7 @@ function Introduction()
         </div>
 
         <div id="avatar">
-            <img src="../../../img/lorran.png" alt='null'></img>
+            <img src="./img/lorran.png" alt='NULL!'></img>
         </div>
 
     

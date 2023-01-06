@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap');
-*{
+
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: 'Titillium Web', sans-serif;
-  
 }
 
-:root{
+:root {
   --mainColorLight: #515d8b;
   --secondaryColor: #ffffff;
   --downloadCVBackground: #6B2286;
@@ -19,7 +19,6 @@
 }
 
 header {
-  
   display: flex;
   align-items: center;
   justify-content: start;
@@ -29,7 +28,7 @@ header {
   color: var(--textColor);
 }
 
-nav button{
+nav button {
   background-color: transparent;
   margin: 0 1.5rem;
   color: var(--textColor);
@@ -37,13 +36,11 @@ nav button{
   font-size: 1.23em;
 }
 
-
-
-nav button:hover{
+nav button:hover {
   color: var(--secondaryColor);
 }
 
-header .nav-btn{
+header .nav-btn {
   padding: 5px;
   cursor: pointer;
   background-color: transparent;
@@ -54,7 +51,7 @@ header .nav-btn{
   opacity: 0;
 }
 
-.logo{
+.logo {
   font-size: 2.22em;
   font-weight: bold;
   color: var(--logoColor);
@@ -62,26 +59,58 @@ header .nav-btn{
   user-select: none;
 }
 
-body{
+body {
   background-image: url('../../../public/img/background.png');
+  background-color: #000103;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-@media (max-width: 768px) {
-  body {
-    font-size: 14px;
-  }
-}
-
-.contact-btn{
+.contact-btn {
   border: solid white 1.3px;
   padding: 15px 30px;
 }
 
-.intro{
-  overflow: hidden; /* Hide scrollbars */
+
+.intro {
+
+  overflow: hidden;
   height: 550px;
+  background-color: var(--backgroundBoxColor);
+  color: var(--secondaryColor);
+  border-radius: 25px;
+  width: 70%;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px,
+    rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 20px;
+  padding-left: 50px;
+}
+
+
+
+.intro-job {
+  border: 10px solid var(--backgroundBoxColor);
+  background-color: var(--backgroundBoxColor);
+  color: var(--secondaryColor);
+  border-radius: 25px;
+  width: 70%;
+  max-width: 70%;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px,
+    rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  padding: 10px;
+  align-items: center;
+  margin: auto;
+  margin-top: 20px;
+  padding-left: 50px;
+}
+
+.intro-contact{
+  overflow: hidden; /* Hide scrollbars */
+  height: 45.5em;
   border: 10px solid var(--backgroundBoxColor);
   background-color: var(--backgroundBoxColor);
   color: var(--secondaryColor);
@@ -99,6 +128,24 @@ body{
   padding-left: 50px;
 }
 
+.workList
+{
+  width: 76.5em;
+  max-width: 76.5em;
+  height: 50em;
+  max-height: 50em;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center; /* isso fará com que os elementos sejam alinhados à esquerda da página */
+}
+
+.workList .project-work {
+max-width: 25em;
+;}
+
+
 .type{
   font-weight: bold;
   font-size: 1.2em;
@@ -112,10 +159,63 @@ body{
   float: left;
 }
 
+.project-work{
+ max-width: 25em;
+ text-align: center;
+ flex: 0 0 50%; /* isso fará com que cada elemento ocupe 50% da largura da página */
+ display: flex;
+ flex-direction: column;
+ align-items: center; /* isso fará com que o conteúdo do elemento fique centralizado */
+ padding: 10px;
+ 
+}
+
+.project-work .wishlist{
+  margin-top: 15px;
+  font-size: 1.07em;
+  font-weight: bold;
+  background-color: rgb(53, 114, 53);
+  color: white;
+  padding: 7px;
+}
+
+.project-work .wishlist:hover{
+  
+  background-color: rgb(32, 61, 32);
+  cursor: pointer;
+
+}
+
+.image-project{
+   user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    display: block;
+    backface-visibility: hidden;
+    width: 100%;
+    height: auto;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+
 #avatar img {
+  overflow: visible;
   pointer-events: none;
-  width: 18vw; /* changed from fixed width in pixels to responsive width in vw */
-  height: 18vw; /* changed from fixed height in pixels to responsive height in vw */
+  width: 350px; 
   float: right;
   margin-top: -65px;
   margin-right: 80px;
@@ -127,13 +227,36 @@ body{
 }
 
 
-@media (max-width: 480px) {
-  #avatar img {
-    width: 0%;
-    height: 0%;
-  }
+
+.project-image-container:hover .image-project {
+  opacity: 0.3;
+  transition: all 0.15s;
+  cursor: pointer;
 }
 
+.project-image-container:hover .middle {
+  opacity: 1;
+  transition: all 0.05s;
+  cursor: pointer;
+}
+
+.text {
+  color: white;
+  font-size: 2em;
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  font-weight: bold;
+}
+
+.project-image-container {
+  position: relative;
+  width: 100%;
+  padding: 1px;
+}
 
 .curriculum{
   font-size: 0.8em;
@@ -144,7 +267,6 @@ body{
   padding: 10px 20px;
   border: solid white 1.3px;
   margin-top: 20px;
-  max-width: 47%;
   text-align: center;
   border: 1px solid black;
   border-radius: 7px;
@@ -232,17 +354,7 @@ body{
   margin-bottom: 20px;
 }
 
-@media (max-width: 768px) {
-  .service {
-    width: 45%;
-  }
-}
 
-@media (max-width: 576px) {
-  .service {
-    width: 90%;
-  }
-}
 
 .portfolio{
   display: flex;
@@ -276,17 +388,7 @@ body{
   margin-bottom: 20px;
 }
 
-@media (max-width: 768px) {
-  .project {
-    width: 45%;
-  }
-}
 
-@media (max-width: 576px) {
-  .project {
-    width: 90%;
-  }
-}
 
 .footer{
   height: 80px;
@@ -410,3 +512,1106 @@ body{
 {
   text-align: right;
 }
+
+#name, #email, #subject, #message, #send{
+  display: block;
+  margin: auto;
+  margin-top: 15px;
+  width: 60%;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px,
+  rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px,
+  rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  border: 3px solid var(--downloadCVBackground);
+  
+
+}
+
+
+input[type="text"], input[type="email"], input[type="message"], textarea {
+ padding: 11px;
+}
+
+
+#name, #email, #subject
+{
+  height: 50px;
+  font-size: 150%;
+}
+
+#send
+{
+  height: 50px;
+  width: 120px;
+  margin: auto;
+  text-decoration: none;
+  color: black;
+  transition: .2s;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: solid white 1.3px;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 7px;
+  cursor: pointer;
+  
+}
+
+#m{
+  opacity: 0;
+}
+
+#send:hover
+{
+  background-color: var(--downloadCVBackground);
+  color: var(--secondaryColor);
+}
+
+#send p
+{
+  font-size: 2em;
+  margin-top: -5px;
+}
+
+#message{
+  resize: none;
+  font-size: 150%;
+}
+
+
+/* PHONES */
+
+@media (min-width: 320px) and (max-width: 375px)
+{
+  .intro{
+    height: 370px;
+  }
+  .description{
+    font-size: 17px;
+    overflow: hidden;
+    height: 460px;
+    margin-left: -36px;
+    width: 200px;
+    text-overflow: ellipsis;
+    
+  }
+  .type{
+    font-size: 8.4px;
+    margin-top: 10px;
+    margin-left: -37px;
+  }
+  #avatar img{
+    width: 110px;
+    margin-top: -465px;
+    margin-right: 13px;
+  }
+  .curriculum {
+    white-space: nowrap;
+    width: 200px;
+    font-size: 0.9em;
+    text-align: left;
+    width: 150px;    
+    padding-left: 10px;
+  }
+  
+  .logo{
+    font-size: 1em;
+
+  }
+
+
+  nav button{
+    opacity: 0;
+  }
+
+  .gamedev-skills h1
+  {
+    white-space: nowrap;
+   margin-left: -50px;
+   margin-top: -15px;
+   font-size: 16px;
+  }
+  #skills{
+    height: 620px;
+  }
+  .skills-container{
+    width: 190px;
+    height: 10px;
+    float: left;
+    margin-left: -50px;
+  }
+  .skill-header{
+    margin-left: -55px;
+    font-size: 15px;
+  }
+
+  .javascript-skills h1
+  {
+   margin-left: -47.5px;
+   float: left;
+   margin-top: -22px;
+   font-size: 16px;
+  }
+
+  .javascript-skills{
+    margin-top: -175px;
+    margin-right: 103px;
+  }
+
+  .intro-contact
+  {
+    height: 280px;
+  }
+
+  .intro-contact h1
+  {
+    margin-left: -47.5px;
+    float: left;
+    margin-top: -12px;
+    font-size: 16px;
+  }
+
+  .form
+  {
+    margin-left: -150px;
+  }
+
+  #name, #email, #subject
+  {
+    width: 100px;
+    margin-left: 99px;
+    height: 30px;
+    font-size: 10px;
+    padding: 0px;
+
+  }
+
+  #message{
+    margin-left: 99px;
+    height: 55px;
+    font-size: 10px;
+  }
+
+  #message::placeholder
+  {
+    font-size: 10px;
+    color: white;
+  }
+
+  #send{
+    width: 5px;
+    height: 10px;
+  }
+  #send p{
+    font-size: 10px;
+    width: 5px;
+    height: 10px;
+    margin-left: -11.5px;
+    margin-top: -7px;
+  }
+
+  .github, .linkedin
+  {
+    margin-top: 27px;
+  }
+}
+
+@media (min-width: 414px) and (max-width: 699px)
+{
+  .intro{
+    height: 370px;
+    width: 380px;
+  }
+  .description{
+    font-size: 17px;
+    overflow: hidden;
+    height: 460px;
+    margin-left: -36px;
+    width: 200px;
+    text-overflow: ellipsis;
+    
+  }
+  .type{
+    font-size: 8.4px;
+    margin-top: 10px;
+    margin-left: -37px;
+  }
+  #avatar img{
+    width: 150px;
+    margin-top: -414px;
+    margin-right: 20px;
+  }
+  .curriculum {
+    white-space: nowrap;
+    width: 200px;
+    font-size: 0.9em;
+    text-align: left;
+    width: 150px;    
+    padding-left: 10px;
+  }
+  
+  .logo{
+    font-size: 1em;
+
+  }
+  .intro-job
+  {
+    width: 100px;
+    height: 770px;
+  }
+
+  .workList
+  {
+    margin-top: 0px;
+  }
+
+  .intro-job h2, p
+  {
+    font-size: 11px;
+    width: 180px;
+  }
+
+  .intro-job h1
+  {
+    white-space: nowrap;
+    margin-left: -50px;
+    margin-top: -15px;
+    font-size: 18px;
+  }
+
+  #my-work
+  {
+    width: 900px;
+  }
+
+  .project-image-container
+  {
+    width: 200px;
+  }
+
+  .image-project
+  {
+    width: 200px;
+  }
+
+
+  nav button{
+    opacity: 0;
+  }
+
+  .gamedev-skills h1
+  {
+    white-space: nowrap;
+   margin-left: -50px;
+   margin-top: -15px;
+   font-size: 16px;
+  }
+  #skills{
+    height: 620px;
+  }
+  .skills-container{
+    width: 190px;
+    height: 10px;
+    float: left;
+    margin-left: -50px;
+  }
+  .skill-header{
+    margin-left: -55px;
+    font-size: 15px;
+  }
+
+  .javascript-skills h1
+  {
+   margin-left: -50.5px;
+   float: left;
+   margin-top: -22px;
+   font-size: 16px;
+  }
+
+  .javascript-skills{
+    margin-top: -165px;
+    margin-right: 150px;
+  }
+
+  .intro-contact
+  {
+    height: 300px;
+    width: 380px;
+  }
+
+  .intro-contact h1
+  {
+    margin-left: -47.5px;
+    float: left;
+    margin-top: -12px;
+    font-size: 16px;
+  }
+
+  .form
+  {
+    margin-left: -150px;
+  }
+
+  #name, #email, #subject
+  {
+    width: 130px;
+    margin-left: 99px;
+    height: 30px;
+    font-size: 10px;
+    padding: 0px;
+
+  }
+
+  #message{
+    margin-left: 99px;
+    height: 79px;
+    font-size: 10px;
+  }
+
+  #message::placeholder
+  {
+    font-size: 10px;
+    color: white;
+  }
+
+  #send{
+    width: 5px;
+    height: 10px;
+  }
+  #send p{
+    font-size: 10px;
+    width: 5px;
+    height: 10px;
+    margin-left: -11.5px;
+    margin-top: -7px;
+  }
+
+  .github, .linkedin
+  {
+    margin-top: 27px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 414px)
+{
+  .intro{
+    height: 370px;
+    width: 340px;
+  }
+  .description{
+    font-size: 17px;
+    overflow: hidden;
+    height: 460px;
+    margin-left: -36px;
+    width: 200px;
+    text-overflow: ellipsis;
+    
+  }
+  .type{
+    font-size: 8.4px;
+    margin-top: 10px;
+    margin-left: -37px;
+  }
+  #avatar img{
+    width: 110px;
+    margin-top: -390px;
+    margin-right: 10px;
+  }
+  .curriculum {
+    white-space: nowrap;
+    width: 200px;
+    font-size: 0.9em;
+    text-align: left;
+    width: 150px;    
+    padding-left: 10px;
+  }
+  
+  .logo{
+    font-size: 1em;
+
+  }
+
+  nav button{
+    opacity: 0;
+  }
+
+  .gamedev-skills h1
+  {
+    white-space: nowrap;
+   margin-left: -50px;
+   margin-top: -15px;
+   font-size: 16px;
+  }
+  #skills{
+    height: 620px;
+  }
+  .skills-container{
+    width: 190px;
+    height: 10px;
+    float: left;
+    margin-left: -50px;
+  }
+  .skill-header{
+    margin-left: -55px;
+    font-size: 15px;
+  }
+
+  .javascript-skills h1
+  {
+   margin-left: -47.5px;
+   float: left;
+   margin-top: -22px;
+   font-size: 16px;
+  }
+
+  .javascript-skills{
+    margin-top: -165px;
+    margin-right: 110px;
+  }
+
+  .intro-contact
+  {
+    height: 279px;
+    width: 340px;
+  }
+
+  .intro-contact h1
+  {
+    margin-left: -47.5px;
+    float: left;
+    margin-top: -12px;
+    font-size: 16px;
+  }
+
+  .form
+  {
+    margin-left: -150px;
+  }
+
+  #name, #email, #subject
+  {
+    width: 130px;
+    margin-left: 99px;
+    height: 30px;
+    font-size: 10px;
+    padding: 0px;
+
+  }
+
+  #message{
+    margin-left: 99px;
+    height: 79px;
+    font-size: 10px;
+  }
+
+  #message::placeholder
+  {
+    font-size: 10px;
+    color: white;
+  }
+
+  #send{
+    width: 5px;
+    height: 10px;
+  }
+  #send p{
+    font-size: 10px;
+    width: 5px;
+    height: 10px;
+    margin-left: -11.5px;
+    margin-top: -7px;
+  }
+
+  .github, .linkedin
+  {
+    margin-top: 27px;
+  }
+  
+  
+}
+
+
+@media(min-width: 568px) and (max-width: 667px)
+{
+  .intro{
+    height: 390px;
+    width: 490px;
+  }
+  .description{
+    font-size: 20px;
+    overflow: hidden;
+    height: 470px;
+    margin-left: -36px;
+    width: 260px;
+    text-overflow: ellipsis;
+    
+  }
+  .type{
+    font-size: 8.4px;
+    margin-top: 10px;
+    margin-left: -37px;
+  }
+
+  #avatar{
+  }
+  #avatar img{
+    width: 170px;
+    margin-top: -440px;
+    margin-left: 120px;
+  }
+  .curriculum {
+    white-space: nowrap;
+    font-size: 0.9em;
+    text-align: left;
+    width: 170px;    
+    padding-left: 10px;
+  }
+  
+  .logo{
+    font-size: 1em;
+
+  }
+
+  nav button{
+    opacity: 0;
+  }
+
+  .gamedev-skills h1
+  {
+    white-space: nowrap;
+   margin-left: -50px;
+   margin-top: -15px;
+   font-size: 16px;
+  }
+  #skills{
+    height: 540px;
+    width: 300px;
+  }
+  .skills-container{
+    width: 190px;
+    height: 5px;
+    float: left;
+    margin-left: -50px;
+  }
+  .skill-header{
+    margin-left: -55px;
+    font-size: 15px;
+  }
+
+  .javascript-skills h1
+  {
+   float: left;
+   margin-top: -22px;
+   font-size: 16px;
+  }
+
+  .javascript-skills{
+    margin-top: -220px;
+    margin-right: 70px;
+  }
+
+  .intro-contact
+  {
+    height: 279px;
+    width: 490px;
+  }
+
+  .intro-contact h1
+  {
+    margin-left: -47.5px;
+    float: left;
+    margin-top: -12px;
+    font-size: 16px;
+  }
+
+  .form
+  {
+    margin-left: -150px;
+  }
+
+  #name, #email, #subject
+  {
+    width: 130px;
+    margin-left: 99px;
+    height: 30px;
+    font-size: 10px;
+    padding: 0px;
+
+  }
+
+  #message{
+    margin-left: 99px;
+    height: 79px;
+    font-size: 10px;
+  }
+
+  #message::placeholder
+  {
+    font-size: 10px;
+    color: white;
+  }
+
+  #send{
+    width: 5px;
+    height: 10px;
+  }
+  #send p{
+    font-size: 10px;
+    width: 5px;
+    height: 10px;
+    margin-left: -11.5px;
+    margin-top: -7px;
+  }
+
+  .github, .linkedin
+  {
+    margin-top: 27px;
+  }
+  
+}
+
+@media(min-width: 700px) and (max-width: 812px)
+{
+  .intro{
+    height: 380px;
+    width: 650px;
+    
+  }
+  .description{
+    font-size: 22px;
+    overflow: hidden;
+    height: 490px;
+    margin-left: -36px;
+    width: 290px;
+    text-overflow: ellipsis;
+    
+  }
+  .type{
+    font-size: 11px;
+    margin-top: 10px;
+    margin-left: -37px;
+  }
+
+
+  #avatar img{
+    width: 210px; 
+    height: 210px;  
+    margin-top: 0px;
+   
+  }
+  .curriculum {
+    white-space: nowrap;
+    font-size: 0.9em;
+    text-align: left;
+    width: 180px;    
+    padding-left: 10px;
+  }
+  
+  .logo{
+    font-size: 1em;
+
+  }
+
+  nav button{
+    opacity: 0;
+  }
+
+  .gamedev-skills h1
+  {
+    white-space: nowrap;
+   margin-left: -50px;
+   margin-top: -15px;
+   font-size: 16px;
+  }
+  #skills{
+    height: 540px;
+    width: 300px;
+  }
+  .skills-container{
+    width: 190px;
+    height: 5px;
+    float: left;
+    margin-left: -50px;
+  }
+  .skill-header{
+    margin-left: -55px;
+    font-size: 15px;
+  }
+
+  .javascript-skills h1
+  {
+   float: left;
+   margin-top: -22px;
+   font-size: 16px;
+  }
+
+  .javascript-skills{
+    margin-top: -220px;
+    margin-right: 70px;
+  }
+
+  .intro-contact
+  {
+    height: 279px;
+    width: 630px;
+  }
+
+  .intro-contact h1
+  {
+    margin-left: -47.5px;
+    float: left;
+    margin-top: -12px;
+    font-size: 16px;
+  }
+
+  .form
+  {
+    margin-left: -150px;
+  }
+
+  #name, #email, #subject
+  {
+    width: 130px;
+    margin-left: 99px;
+    height: 30px;
+    font-size: 10px;
+    padding: 0px;
+
+  }
+
+  #message{
+    margin-left: 99px;
+    height: 79px;
+    font-size: 10px;
+  }
+
+  #message::placeholder
+  {
+    font-size: 10px;
+    color: white;
+  }
+
+  #send{
+    width: 5px;
+    height: 10px;
+  }
+  #send p{
+    font-size: 10px;
+    width: 5px;
+    height: 10px;
+    margin-left: -11.5px;
+    margin-top: -7px;
+  }
+
+  .github, .linkedin
+  {
+    margin-top: 27px;
+  }
+}
+@media(min-width: 813px) and (max-width: 1024px)
+{
+  .intro{
+    height: 384px;
+    width: 650px;
+  }
+  .description{
+    font-size: 22px;
+    overflow: hidden;
+    height: 490px;
+    margin-left: -29px;
+    width: 320px;
+    text-overflow: ellipsis;
+    
+  }
+  .type{
+    font-size: 13px;
+    margin-top: 10px;
+    margin-left: -29px;
+  }
+
+  
+  #avatar img{
+    width: 210px; 
+    height: 210px;  
+    margin-top: 0px;
+    margin-right: 10px;
+   
+  }
+  .curriculum {
+    white-space: nowrap;
+    width: 202px;
+    font-size: 0.7em;
+    text-align: left;
+    width: 149px;    
+    padding-left: 10px;
+  }
+  
+  .logo{
+    font-size: 1em;
+    
+  }
+  
+  nav button{
+    opacity: 0;
+  }
+  
+  .gamedev-skills h1
+  {
+    white-space: nowrap;
+    margin-left: -50px;
+    margin-top: -15px;
+    font-size: 22px;
+  }
+  #skills{
+    height: 290px;
+  }
+  .skills-container{
+    width: 140px;
+    height: 5px;
+    float: left;
+    margin-left: -50px;
+  }
+  .skill-header{
+    margin-left: -55px;
+    font-size: 15px;
+  }
+  
+  .javascript-skills h1
+  {
+   margin-left: -50.5px;
+   float: left;
+   margin-top: -40.5px;
+   font-size: 22px;
+  }
+  
+  .javascript-skills{
+    margin-top: 24px;
+    margin-right: -12px;
+  }
+  
+  .intro-contact
+  {
+    height: 310px;
+    width: 650px;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 20px;
+    padding-left: 150px;
+    
+  }
+  
+  .intro-contact h1
+  {
+    margin-left: -138.5px;
+    float: left;
+    margin-top: -12px;
+    font-size: 22px;
+  }
+  
+  .form
+  {
+    margin-left: -150px;
+  }
+  
+  #name, #email, #subject
+  {
+    width: 130px;
+    height: 30px;
+    font-size: 10px;
+    padding: 0px;
+    
+    
+    
+  }
+  
+  #name{
+    margin-top: 40px;
+  }
+
+  #message{
+    height: 79px;
+    font-size: 10px;
+  }
+  
+  #message::placeholder
+  {
+    font-size: 10px;
+    color: white;
+  }
+  
+  #send{
+    width: 5px;
+    height: 10px;
+  }
+  #send p{
+    font-size: 10px;
+    width: 5px;
+    height: 10px;
+    margin-left: -11.5px;
+    margin-top: -7px;
+  }
+  
+  .github, .linkedin
+  {
+    margin-top: 27px;
+  }
+}
+@media(min-width: 1025px) and (max-width: 1112px)
+{
+  .intro
+  {
+    height: 700px;
+    width: 860px;
+  }
+
+  #avatar img
+  {
+    margin-top: -500px;
+    
+  }
+
+  #skills
+  {
+    height: 500px;
+    width: 860px;
+  }
+
+  .gamedev-skills h1
+  {
+    white-space: nowrap;
+    margin-left: -24px;
+    margin-top: -15px;
+  }
+
+  .skills-container
+  {
+    width: 290px;
+  }
+
+  .javascript-skills h1
+  {
+    white-space: nowrap;
+    margin-left: -24px;
+    margin-top: -15px;
+  }
+
+  .intro-contact{
+    height: 740px;
+    width: 860px;
+  }
+
+  .intro-contact h1
+  {
+    margin-left: -22px;
+  }
+
+}
+
+@media(min-width: 1113px) and (max-width: 1366px)
+{
+  .intro
+  {
+    height: 600px;
+    width: 1200px;
+  }
+
+  #avatar img
+  {
+    margin-top: -50px;
+    
+  }
+
+
+  
+  #skills
+  {
+    height: 500px;
+    width: 1200px;
+  }
+
+  .gamedev-skills h1
+  {
+    white-space: nowrap;
+    margin-left: -24px;
+    margin-top: -15px;
+  }
+
+  .skills-container
+  {
+    width: 490px;
+  }
+
+  .javascript-skills h1
+  {
+    white-space: nowrap;
+    margin-left: -24px;
+    margin-top: -15px;
+  }
+
+  .intro-contact{
+    height: 740px;
+    width: 1200px;
+  }
+
+  .intro-contact h1
+  {
+    margin-left: -22px;
+  }
+
+}
+
+
+@media(min-width: 1367px) and (max-width: 1680px)
+{
+  .intro
+  {
+    height: 600px;
+    width: 1200px;
+  }
+
+  #avatar img
+  {
+    margin-top: -50px;
+    
+  }
+
+
+  
+  #skills
+  {
+    height: 500px;
+    width: 1200px;
+  }
+
+  .gamedev-skills h1
+  {
+    white-space: nowrap;
+    margin-left: -24px;
+    margin-top: -15px;
+  }
+
+  .skills-container
+  {
+    width: 490px;
+  }
+
+  .javascript-skills h1
+  {
+    white-space: nowrap;
+    margin-left: -24px;
+    margin-top: -15px;
+  }
+
+  .intro-contact{
+    height: 740px;
+    width: 1200px;
+  }
+
+  .intro-contact h1
+  {
+    margin-left: -22px;
+  }
+
+}
+
+

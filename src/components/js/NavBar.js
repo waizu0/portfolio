@@ -19,12 +19,6 @@ function NavBar()
                 <button onClick={() => scrollHandler('my-work')}>My Work</button>
                 <button onClick={() => scrollHandler('contact-me')}>Contact Me!</button>
 
-
-                
-
-                
-
-
             </nav>
 
       
